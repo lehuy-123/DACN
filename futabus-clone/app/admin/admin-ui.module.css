@@ -1,0 +1,61 @@
+/* app/admin/admin-ui.module.css */
+
+/* === CSS CHO THANH TÌM KIẾM === */
+.searchWrapper {
+    position: relative;
+    max-width: 450px;
+  }
+  .searchInput {
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  .searchIcon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+  }
+  
+  /* === CSS CHO PHÂN TRANG (ĐÃ SỬA) === */
+  .pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .paginationInfo {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  
+  /* SỬA: Style cho nút icon tròn */
+  .paginationButton {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Căn giữa icon */
+    width: 40px; /* Cố định chiều rộng */
+    height: 40px; /* Cố định chiều cao */
+    padding: 0; /* Xóa padding cũ */
+    border-radius: 50%; /* Bo tròn */
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem; /* Kích thước icon */
+    transition: background-color 0.2s, box-shadow 0.2s;
+  }
+  .paginationButton:hover:not(:disabled) {
+    background-color: #f1f3f5;
+    border-color: #adb5bd;
+  }
+  .paginationButton:disabled {
+    color: #adb5bd;
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+  }

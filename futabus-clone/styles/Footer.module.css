@@ -1,0 +1,166 @@
+.footer {
+  margin-top: 50px;
+}
+
+/* Services */
+.services {
+  text-align: center;
+  padding: 30px 20px;
+  background: #fff;
+}
+
+.services .title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #006400;
+  margin-bottom: 10px;
+}
+
+.services .sub {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.icons div {
+  text-align: center;
+}
+
+.icons img {
+  width: 800px;   /* 👈 chỉnh to hơn (100px–150px tuỳ ý) */
+  height: auto;   /* giữ tỉ lệ ảnh */
+  object-fit: contain;
+  margin: 20px auto;
+  display: block; /* căn giữa */
+  transition: transform 0.3s ease;
+}
+
+
+
+/* Info */
+.info {
+  background: #fff6f0;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.contact {
+  flex: 1.2;
+}
+
+.hotline {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f37021;
+  margin: 10px 0;
+}
+
+.apps img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.links {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+.links h4 {
+  margin-bottom: 10px;
+  color: #006400;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 6px;
+  color: #444;
+  cursor: pointer;
+}
+
+/* Partners */
+.partners {
+  text-align: center;
+  background: #fff;
+  padding: 40px 0;
+  border-top: 1px solid #eee;
+}
+
+.partners img {
+  height: 40px; /* tăng kích thước logo */
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.partners img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Bottom */
+.bottom {
+  background: #006400;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+.footer {
+  background-color: #fff7f5;
+  padding: 40px 0 20px;
+  color: #333;
+}
+
+.connect {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.connect h2 {
+  color: #006633;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.hotline {
+  color: #ff6600;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.links h4 {
+  color: #006633;
+  margin-bottom: 10px;
+}
+
+.partners {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.bottom {
+  background: #006633;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+

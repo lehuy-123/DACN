@@ -1,0 +1,161 @@
+/* File: app/admin/vehicles/vehicles.module.css */
+
+.container {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 20px;
+}
+
+.title {
+    color: #212529;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.addButton {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+.addButton:hover {
+    background-color: #0b5ed7;
+}
+
+.toolbar {
+    margin-bottom: 25px;
+}
+
+.searchWrapper {
+    position: relative;
+    max-width: 450px;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.searchInput:focus {
+    outline: none;
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.searchIcon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.table th, .table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #dee2e6;
+    text-align: left;
+    vertical-align: middle;
+}
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+.licensePlate {
+    font-weight: 600;
+    color: #212529;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+}
+
+.actionButton {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 8px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s;
+    color: #6c757d;
+}
+.actionButton:hover {
+    color: #fff;
+}
+.viewButton:hover { background-color: #0dcaf0; }
+.editButton:hover { background-color: #ffc107; }
+.deleteButton:hover { background-color: #dc3545; }
+
+/* Kiểu cho trạng thái */
+.status {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.đanghoạtđộng {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+.đangbảotrì {
+    background-color: #fff3cd;
+    color: #664d03;
+}
+.ngưnghoạtđộng {
+    background-color: #e2e3e5;
+    color: #41464b;
+}

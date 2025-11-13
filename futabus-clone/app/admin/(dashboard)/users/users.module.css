@@ -1,0 +1,164 @@
+/* app/admin/users/users.module.css */
+
+.container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.addButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.addButton:hover {
+    background-color: #0056b3;
+}
+
+.toolbar {
+    margin-bottom: 20px;
+}
+
+.searchWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 10px 15px 10px 40px; /* Thêm padding trái cho icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.tableWrapper {
+    overflow-x: auto; /* Giúp bảng responsive trên màn hình nhỏ */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e9ecef;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    color: #555;
+    font-weight: 600;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actionButton {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 5px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.editButton {
+    color: #ffc107; /* Vàng */
+}
+.editButton:hover {
+    background-color: #ffc10720;
+}
+
+.deleteButton {
+    color: #dc3545; /* Đỏ */
+}
+.deleteButton:hover {
+    background-color: #dc354520;
+}
+
+/* Kiểu cho vai trò */
+.role {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.admin {
+    background-color: #dc3545; /* Đỏ */
+}
+.editor {
+    background-color: #ffc107; /* Vàng */
+}
+.user {
+    background-color: #28a745; /* Xanh lá */
+}
+
+/* Phân trang */
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+.pagination button {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.pagination button:hover {
+    background-color: #f1f3f5;
+}
+.pagination .active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}

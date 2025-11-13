@@ -1,0 +1,206 @@
+/* ========== Tổng thể ========== */
+.wrapper {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #fff 65%, #fffaf7 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  z-index: 2;
+  margin-top: -100px; /* Đè lên phần header */
+  padding-top: 130px; /* tạo khoảng cách hợp lý cho nội dung */
+}
+
+/* ========== Card chính ========== */
+.container {
+  display: flex;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 1080px;
+  width: 100%;
+  border: 1px solid #ffe8dc;
+  position: relative;
+  z-index: 3;
+  min-height: 460px;
+}
+
+/* ========== Cột bên trái ========== */
+.left {
+  flex: 1.1;
+  padding: 50px 40px;
+  background: #fffdf9;
+  border-right: 1px solid #ffe5d2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left h2 {
+  color: #006341;
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.left p {
+  color: #e95521;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.bannerBox {
+  text-align: center;
+}
+
+.bannerBox h3 {
+  color: #006341;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-top: 12px;
+}
+
+/* ========== Cột bên phải ========== */
+.right {
+  flex: 1;
+  padding: 50px 50px 50px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+/* ========== Tabs Đăng nhập / Đăng ký ========== */
+.tabs {
+  display: flex;
+  gap: 25px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.tabs a,
+.tabs span {
+  text-decoration: none;
+  color: #444;
+  font-size: 15px;
+  padding-bottom: 6px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.tabs .active {
+  color: #e95521;
+  border-bottom: 2px solid #e95521;
+}
+
+.tabs a:hover {
+  color: #e95521;
+}
+
+/* ========== Form ========== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ========== Input có icon ========== */
+.inputGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fffaf7;
+  border: 1px solid #ffe3d5;
+  border-radius: 8px;
+  padding: 10px 14px;
+  transition: all 0.25s ease;
+}
+
+.icon {
+  font-size: 17px;
+  margin-right: 8px;
+  color: #e95521;
+}
+
+.inputGroup input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  color: #333;
+}
+
+.inputGroup:focus-within {
+  border-color: #e95521;
+  box-shadow: 0 0 0 2px #ffede3;
+  background: #fff;
+}
+
+/* ========== Nút chính ========== */
+.button {
+  background: #e95521;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 0;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.button:hover {
+  background: #d94b1d;
+  transform: translateY(-1px);
+}
+
+/* ========== Quên mật khẩu ========== */
+.forgot {
+  display: inline-block;
+  font-size: 14px;
+  color: #e95521;
+  margin-top: 10px;
+  text-align: right;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    border-radius: 10px;
+    max-width: 95%;
+  }
+
+  .left {
+    border-right: none;
+    border-bottom: 1px solid #ffe8dc;
+    padding: 30px;
+  }
+
+  .right {
+    padding: 30px;
+  }
+
+  .wrapper {
+    margin-top: -60px;
+    padding-top: 100px;
+  }
+}

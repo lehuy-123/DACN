@@ -1,0 +1,226 @@
+/* ======== TỔNG THỂ TRANG ======== */
+.headerSection {
+  background: linear-gradient(120deg, #ff6600, #ff8c00);
+  padding-bottom: 80px;
+  /* để SearchForm nổi lên */
+}
+
+.container {
+  display: flex;
+  max-width: 1150px;
+  background: #fafafa;
+  padding: 24px 15px;
+  margin: 0 auto 40px;
+  gap: 20px;
+}
+
+/* ======== SIDEBAR (BỘ LỌC) ======== */
+.sidebar {
+  flex: 0 0 260px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .04);
+  height: fit-content;
+}
+
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.sidebarHeader h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.clearButton {
+  background: none;
+  border: none;
+  color: #e95521;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+}
+
+.filterGroup {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.filterGroup:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.filterGroup>label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.checkboxList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkboxList label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.checkboxList input {
+  margin-right: 8px;
+  accent-color: #ff6600;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* === THAY ĐỔI: Đổi nền tag mặc định sang trắng === */
+.tag,
+.tags span {
+  background: #fff;
+  /* Nền trắng */
+  border: 1px solid #ccc;
+  /* Viền xám */
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all .2s ease;
+  user-select: none;
+}
+
+.tags span:hover,
+.tag:hover {
+  background: #fff8f3;
+  border-color: #ffc5aa;
+}
+
+/* tag được chọn (khớp với styles.tagActive trong TSX) */
+.tagActive {
+  background: #fff7f3 !important;
+  color: #e95521 !important;
+  border-color: #e95521 !important;
+  box-shadow: 0 0 0 2px rgba(233, 85, 33, .12);
+}
+
+/* hỗ trợ focus cho accessibility khi span dùng role="button" */
+.tag:focus,
+.tags span:focus,
+.tagActive:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 102, 0, .22);
+}
+
+/* ======== DANH SÁCH KẾT QUẢ ======== */
+.results {
+  flex: 1;
+  min-width: 0;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+
+.results h2 {
+  font-size: 20px;
+  color: #006341;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.options {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+}
+.options button {
+  background: #f3f4f6;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+.optionActive {
+  background: #fff7f3;
+  border-color: #ffd3bf;
+  color: #e95521;
+}
+
+/* ======== THẺ CHUYẾN XE (3 cột giống FUTA) ======== */
+.tripCard{
+  border:1px solid #f0f0f0; border-radius:12px; background:#fff;
+  padding:14px 16px; margin:12px 0;
+  display:grid; grid-template-columns: 160px 1fr 160px; gap:12px;
+  transition:.2s;
+}
+.tripCard:hover{ border-color:#ffd3bf; box-shadow:0 4px 10px rgba(0,0,0,.06); background:#fffbf8 }
+
+/* Cột 1: thời gian */
+.tripTime{ display:flex; flex-direction:column; gap:4px }
+.timeRow{ display:flex; align-items:center; gap:8px }
+.time{ font-size:18px; font-weight:800; color:#111 }
+.dot{ width:6px; height:6px; border-radius:999px; background:#d9d9d9 }
+.duration{ font-size:12px; color:#77808a }
+
+/* Cột 2: thông tin tuyến */
+.tripInfo{ border-left:1px solid #f5f5f5; padding-left:12px }
+.routeLine{ font-weight:700; color:#2b2f33; margin-bottom:4px; display:flex; align-items:center; gap:6px; flex-wrap:wrap }
+.cityFrom{ color:#e95521 }
+.cityTo{ color:#006341 }
+.arrow{ color:#2b2f33; font-weight:800 }
+
+.locations{ display:flex; gap:16px; flex-wrap:wrap; margin-top:2px }
+.location{ display:flex; gap:6px; font-size:12px; color:#7b7f85 }
+.location label{ color:#555; font-weight:600 }
+
+.meta{ margin-top:4px; display:flex; gap:8px; align-items:center; font-size:12px; color:#8b8f96 }
+.type{ padding:2px 8px; border:1px solid #e5e7eb; border-radius:999px; background:#fff }
+.vehicleInfo{ opacity:.9 }
+
+/* Cột 3: giá + nút */
+.tripAction{
+  display:flex; flex-direction:column; align-items:flex-end; justify-content:space-between
+}
+.price{ color:#e95521; font-weight:800; font-size:20px }
+.seats{ font-size:12px; color:#8b8f96; margin-top:4px }
+.selectBtn{
+  background:#e95521; color:#fff; border:0; border-radius:8px;
+  padding:8px 14px; font-weight:700; cursor:pointer;
+}
+.selectBtn:hover{ filter:brightness(.96) }
+
+/* Trạng thái chung */
+.loading,.noResult{ text-align:center; padding:28px; color:#777 }
+.noResult img{ max-width:140px; margin-bottom:8px }
+.error{ color:#dc2626; text-align:center; padding:8px }
+.compactError{ background:#fff7f3; border:1px solid #ffd3bf; color:#e95521; border-radius:8px; margin-top:8px }
+
+/* Responsive */
+@media (max-width: 860px){
+  .tripCard{ grid-template-columns: 1fr; }
+  .tripInfo{ border-left:0; padding-left:0 }
+  .tripAction{ align-items:flex-start; gap:8px }
+}

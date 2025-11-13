@@ -1,0 +1,126 @@
+/* app/admin/users/detail.module.css */
+.container {
+    padding: 24px;
+    padding-top: 96px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    position: relative;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #212529;
+    margin: 0;
+}
+
+.content {
+    padding: 24px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6c757d;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.value {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.role {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.admin {
+    background-color: #f8d7da;
+    color: #58151c;
+}
+
+.user {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.editor {
+    background-color: #fff3cd;
+    color: #664d03;
+}
+
+.backIconLink {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #495057;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.backIconLink:hover {
+    background-color: #f1f3f5;
+    transform: scale(1.05);
+}
+.role {
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.admin {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.editor {
+  background-color: #198754;
+  color: white;
+}
+
+.user {
+  background-color: #e9ecef;
+  color: #212529;
+}

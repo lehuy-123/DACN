@@ -1,0 +1,286 @@
+.wrapper {
+  padding: 40px 80px;
+  background: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-size: 15px;
+  padding: 6px 10px;
+  color: #444;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.tab:hover {
+  color: #e95521;
+}
+
+.active {
+  color: #e95521;
+  font-weight: 600;
+  border-bottom: 2px solid #e95521;
+}
+
+/* Search box */
+.searchBox {
+  margin-left: auto;
+  position: relative;
+}
+
+.searchBox input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  width: 220px;
+}
+
+/* Section title */
+.sectionTitle,
+.sectionTitleGreen {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 30px 0 20px;
+  padding-left: 10px;
+  border-left: 4px solid #007a3d;
+  color: #007a3d;
+}
+
+/* Highlight news */
+.highlightGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.content {
+  padding: 15px;
+}
+
+.time {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.desc {
+  font-size: 14px;
+  color: #555;
+}
+
+/* All news list */
+.allGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 cột cố định */
+  gap: 20px;
+}
+
+.allCard {
+  display: flex;
+  gap: 15px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 8px;
+  padding: 12px;
+  align-items: flex-start;
+  transition: 0.2s;
+}
+
+.allCard:hover {
+  background: #fffaf7;
+  border-color: #ffe3d5;
+}
+
+/* thumbnail to hơn một chút cho cân chữ */
+.thumb {
+  width: 220px;
+  height: 130px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+
+.allContent .title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.allContent .desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Empty state */
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #777;
+  padding: 24px 12px;
+  background: #fafafa;
+  border: 1px dashed #e6e6e6;
+  border-radius: 8px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.pageButton {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pageButton:hover {
+  background: #fff4ec;
+  border-color: #f37021;
+  color: #f37021;
+}
+
+.pageButton[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageActive {
+  background: #f37021;
+  color: #fff;
+  border-color: #f37021;
+}
+
+.ellipsis {
+  padding: 6px 6px;
+  color: #888;
+  user-select: none;
+}
+
+/* FUTA Group (optional) */
+.futaGroup {
+  margin-top: 60px;
+  text-align: center;
+  background: #fffaf7;
+  border-top: 1px solid #ffe3d5;
+  padding: 40px 0;
+}
+
+.futaGroup h3 {
+  color: #007a3d;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.futaGroup p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.groupIcons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.groupIcons div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #007a3d;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.groupIcons img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .wrapper { padding: 20px; }
+  .highlightGrid { grid-template-columns: 1fr; }
+  .allGrid { grid-template-columns: 1fr; }
+  .searchBox input { width: 160px; }
+  .groupIcons { gap: 25px; }
+}
+/* ===== Bổ sung bố cục nổi bật giống FUTA ===== */
+.highlightFuta {
+  /* 1 cột lớn (2fr) + 2 cột nhỏ (1fr, 1fr) */
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.cardLarge {
+  grid-column: 1 / 2;   /* ô lớn bên trái */
+  grid-row: span 2;     /* chiếm 2 hàng */
+}
+
+.cardSmall {
+  grid-column: auto;    /* hai ô nhỏ bên phải */
+}
+
+/* Chiều cao ảnh cho từng loại thẻ */
+.cardLarge .image { height: 260px; }
+.cardSmall .image { height: 160px; }
+
+/* Mobile: quay về 1 cột */
+@media (max-width: 992px) {
+  .highlightFuta { grid-template-columns: 1fr; }
+  .cardLarge { grid-row: auto; }
+  .cardLarge .image { height: 200px; }
+  .cardSmall .image { height: 180px; }
+}

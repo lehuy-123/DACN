@@ -1,0 +1,63 @@
+.wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #fff;
+}
+.trigger:hover { background: rgba(255,255,255,0.08); }
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #fff;
+  color: #ff5a1f;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.name { font-weight: 600; line-height: 1; }
+.caret { opacity: .95; }
+
+/* Giảm gap để không bị “rơi” vào khoảng trống */
+.menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px); /* trước là 8px */
+  width: 240px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.14);
+  padding: 8px;
+  z-index: 110;
+}
+
+.item {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #333;
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+  text-align: left;
+}
+.item:hover { background: #f7f7f7; }
+
+.danger { color: #d8232a; }
+
+@media (max-width: 900px) { .name { display: none; } }

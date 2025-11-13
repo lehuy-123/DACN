@@ -1,0 +1,113 @@
+/* app/admin/vehicles/form.module.css */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    max-width: 900px;
+    margin: 24px auto;
+}
+
+.header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #212529;
+    margin: 0;
+}
+
+.form {
+    padding: 24px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroupFull {
+    grid-column: 1 / -1;
+}
+
+.label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+.input,
+.select {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus,
+.select:focus {
+    outline: none;
+    border-color: #F26522;
+    box-shadow: 0 0 0 3px rgba(242, 101, 34, 0.2);
+}
+
+.actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid #e9ecef;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.saveButton {
+    background-color: #F26522;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+.saveButton:hover {
+    background-color: #d95a1f;
+}
+
+.cancelButton {
+    background-color: #f1f3f5;
+    color: #495057;
+    transition: background-color 0.2s;
+}
+
+.cancelButton:hover {
+    background-color: #e9ecef;
+}

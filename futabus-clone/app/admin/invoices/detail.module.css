@@ -1,0 +1,52 @@
+/* app/admin/invoices/detail.module.css */
+.container { padding: 24px; padding-top: 96px; background-color: #f8f9fa; min-height: 100vh; position: relative; }
+.card { background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); overflow: hidden; max-width: 900px; margin: 0 auto; }
+.header { padding: 24px 32px; border-bottom: 1px solid #e9ecef; display: flex; justify-content: space-between; align-items: center; }
+.title { font-size: 2.25rem; font-weight: 700; color: #212529; margin: 0; }
+.content { padding: 32px; }
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px 32px; }
+.label { display: block; font-size: 0.875rem; font-weight: 500; color: #6c757d; margin-bottom: 4px; text-transform: uppercase; }
+.value { font-size: 1.125rem; font-weight: 600; color: #212529; }
+.valueFull { grid-column: 1 / -1; }
+.total { font-size: 1.5rem; font-weight: 700; color: #F26522; /* Màu cam FUTA */ }
+.status { display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
+.paid { background-color: #d1e7dd; color: #0f5132; }
+.pending { background-color: #fff3cd; color: #664d03; }
+.cancelled { background-color: #e2e3e5; color: #41464b; }
+.backIconLink { position: absolute; top: 32px; left: 32px; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background-color: #ffffff; color: #495057; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); font-size: 1.125rem; text-decoration: none; transition: all 0.2s ease; }
+.backIconLink:hover { background-color: #f1f3f5; transform: scale(1.05); }
+
+/* CSS cho Nút In */
+.printButton { display: flex; align-items: center; gap: 8px; background-color: #198754; color: white; border: none; border-radius: 6px; padding: 10px 16px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color 0.2s; }
+.printButton:hover { background-color: #157347; }
+
+/* === SỬA LỖI PRINT === */
+@media print {
+  /* HACK: "Neo" thẻ :global(body) vào class local .container 
+    để "đánh lừa" CSS Modules.
+  */
+  .container :global(body) {
+    background-color: #fff !important;
+  }
+
+  /* Các class local này sẽ tự động được áp dụng */
+  .container {
+    padding: 0 !important;
+    background-color: #fff !important;
+  }
+  .backIconLink {
+    display: none !important;
+  }
+  .header {
+    padding-bottom: 0 !important;
+  }
+  /* Style cho nút in (cũng là class local) */
+  .printButton {
+    display: none !important;
+  }
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #000 !important;
+    max-width: 100% !important;
+  }
+}

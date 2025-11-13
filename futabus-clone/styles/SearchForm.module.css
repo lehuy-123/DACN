@@ -1,0 +1,135 @@
+/* Tổng thể form */
+.box {
+  background: #fff;
+  border: 1.5px solid #ff6600;
+  border-radius: 12px;
+  padding: 24px;
+  width: 70%;
+  max-width: 900px;
+  margin: -60px auto 40px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+/* Phần header (Một chiều / Khứ hồi / Hướng dẫn) */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  /* Tăng khoảng cách cho thoáng */
+}
+
+.radioGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* Tăng khoảng cách */
+}
+
+.radioGroup label {
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  /* Thêm cursor */
+}
+
+.radioGroup input {
+  margin-right: 5px;
+  accent-color: #ff6600;
+  /* Màu cam FUTA */
+}
+
+.guide {
+  color: #ff6600;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Phần form nhập điểm đi, đến, ngày, vé */
+.row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* === THÊM MỚI: Nhóm (label + input) === */
+/* Đây là class .inputGroup trong file .tsx */
+.inputGroup {
+  flex: 1;
+  /* Cho các nhóm tự chia sẻ không gian */
+  display: flex;
+  flex-direction: column;
+  /* Xếp label trên input */
+  gap: 6px;
+  /* Khoảng cách giữa label và input */
+  min-width: 150px;
+  /* Độ rộng tối thiểu, chống vỡ layout */
+}
+
+.inputGroup label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* === SỬA ĐỔI: Áp dụng style cho input/select BÊN TRONG .inputGroup === */
+.inputGroup input,
+.inputGroup select {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  /* Quan trọng để padding không làm vỡ layout */
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+  border-color: #ff6600;
+  outline: none;
+}
+
+/* === THÊM MỚI: Style cho DatePicker === */
+/* Đây là class .dateInput trong file .tsx */
+.dateInput {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.dateInput:focus {
+  border-color: #ff6600;
+  outline: none;
+}
+
+/* ================================== */
+
+
+/* Nút tìm chuyến xe */
+.btn {
+  display: block;
+  margin: 24px auto 0;
+  background: linear-gradient(90deg, #ff6600, #e64a19);
+  color: white;
+  border: none;
+  padding: 12px 48px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}

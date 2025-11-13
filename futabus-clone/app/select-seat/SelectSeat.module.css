@@ -1,0 +1,753 @@
+/* ====== HERO (nền cam chỉ cho header) ====== */
+.hero {
+  background: linear-gradient(180deg, #ff7433 0%, #e95521 35%, #fff 35%);
+  padding: 32px 0 24px;
+  /* giảm padding để card trắng nổi bật */
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1160px;
+  margin: 0 auto;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color: #222
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 16px
+}
+
+.header h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0
+}
+
+.subInfo {
+  color: #ffe6d8;
+  margin-top: 4px;
+  font-size: 14px
+}
+
+/* ====== CONTENT CARD: mọi khung chỉ nằm trên nền trắng này ====== */
+.contentCard {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
+  padding: 22px 24px;
+  margin-bottom: 18px;
+}
+
+/* ====== GRID TRONG CARD 1 ====== */
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: start;
+  gap: 26px
+}
+
+/* LEFT (chỉ còn tiêu đề + legend; nền trắng do contentCard lo) */
+.leftCard {
+  position: relative
+}
+
+.leftHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px
+}
+
+.leftHeader h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #333;
+  margin: 0
+}
+
+.vehicleLink {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0071ce;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  transition: color .25s
+}
+
+.vehicleLink:hover {
+  color: #e95521
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+  color: #666;
+  margin: 8px 0 12px;
+  flex-wrap: wrap
+}
+
+.legendItem {
+  display: flex;
+  align-items: center
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 6px;
+  border: 1px solid #ddd
+}
+
+.sold {
+  background: #e9ecef;
+  border-color: #d9dfe5
+}
+
+.free {
+  background: #e6f7ff;
+  border-color: #00aeff
+}
+
+.sel {
+  background: #fff0eb;
+  border-color: #e95521
+}
+
+/* ====== SEAT LAYOUT: 2 – AISLE – 2 ====== */
+.seatMatrix {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start
+}
+
+.seatRow {
+  display: flex;
+  align-items: center;
+  gap: 14px
+}
+
+.block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px
+}
+
+.aisle {
+  width: 32px;
+  height: 1px
+}
+
+.seatCell {
+  width: 48px;
+  height: 62px;
+  border: none;
+  background: transparent;
+  border-radius: 12px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform .12s ease
+}
+
+.seatCell:disabled {
+  cursor: not-allowed
+}
+
+.seatCell:not(:disabled):hover {
+  transform: translateY(-1px)
+}
+
+.seatIcon {
+  display: block
+}
+
+.seatIcon svg {
+  width: 34px;
+  height: 34px
+}
+
+.seatLabel {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: .2px;
+  text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff
+}
+
+/* trạng thái */
+.availableSeat svg {
+  fill: #e6f7ff;
+  stroke: #00aeff;
+  stroke-width: 1.6
+}
+
+.availableSeat .seatLabel {
+  color: #0a81d8
+}
+
+.availableSeat:not(:disabled):hover svg {
+  fill: #d6f1ff
+}
+
+.soldSeat svg {
+  fill: #eeeeee;
+  stroke: #b0b0b0;
+  stroke-width: 1.6
+}
+
+.soldSeat .seatLabel {
+  color: #9099a3
+}
+
+.selectedSeat svg {
+  fill: #fff0eb;
+  stroke: #e95521;
+  stroke-width: 1.6
+}
+
+.selectedSeat .seatLabel {
+  color: #cf461a
+}
+
+/* tiêu đề tầng */
+.deckHeader {
+  font-weight: 700;
+  color: #222;
+  margin: 8px 0 6px
+}
+
+.deckHeader small {
+  font-weight: 500;
+  color: #8a8f98;
+  margin-left: 6px
+}
+
+/* ====== RIGHT COLUMN (nằm trong contentCard) ====== */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 18px
+}
+
+.infoCard {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .03)
+}
+
+.cardTitle {
+  font-weight: 700;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px
+}
+
+.cardTitle.summaryInfo::after {
+  content: "ⓘ";
+  font-size: 16px;
+  line-height: 1;
+  color: #e95521;
+  font-weight: 700
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
+
+.infoList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #f3f3f3
+}
+
+.infoList li:last-child {
+  border-bottom: none
+}
+
+.infoList span {
+  color: #555;
+  font-size: 14px
+}
+
+.infoList b {
+  color: #111;
+  font-weight: 600;
+  font-size: 14px
+}
+
+.totalRow {
+  border-top: 1px solid #eee;
+  padding-top: 6px;
+  margin-top: 4px
+}
+
+.totalRow b {
+  color: #e95521;
+  font-size: 15px;
+  font-weight: 700
+}
+
+/* ====== FORM + ĐÓN/TRẢ (dùng trong contentCard thứ 2 nếu có) ====== */
+.customerGrid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 36px;
+  margin-top: 18px;
+  align-items: stretch
+}
+
+@media (max-width:900px) {
+  .customerGrid {
+    grid-template-columns: 1fr
+  }
+}
+
+.formGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px
+}
+
+.inputGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+  display: block
+}
+
+.inputGroup input {
+  width: 100%;
+  border: 1px solid #cfd4da;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #222;
+  transition: .2s
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: #ff6b00;
+  box-shadow: 0 0 0 2px rgba(255, 107, 0, .15)
+}
+
+.policyBox {
+  background: #fff;
+  border-left: 3px solid #ff6600;
+  padding-left: 22px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.7;
+  height: 100%
+}
+
+.policyTitle {
+  color: #ff6600;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 10px
+}
+
+.redText {
+  color: #d62828;
+  font-weight: 600;
+  margin-bottom: 10px
+}
+
+.orange {
+  color: #ff6600;
+  font-weight: 700
+}
+
+.policyBox p {
+  margin: 6px 0
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  font-size: 14px;
+  color: #444
+}
+
+.sectionTitle {
+  font-weight: 700;
+  font-size: 16px;
+  color: #222;
+  margin: 16px 0 12px;
+  border-bottom: 2px solid #f2f2f2;
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px
+}
+
+.sectionTitle::after {
+  content: "ⓘ";
+  font-size: 16px;
+  line-height: 1;
+  color: #e95521;
+  font-weight: 700
+}
+
+.pdGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px
+}
+
+.pdCol {
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  padding: 16px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .02)
+}
+
+.pdTitle {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333
+}
+
+.radioRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #444
+}
+
+.select {
+  width: 100%;
+  border: 1px solid #cfd4da;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #222
+}
+
+.helper {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #555
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #eaeaea
+}
+
+.amount span {
+  background: #e9f5e9;
+  color: #1a7f37;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 13px
+}
+
+.amount b {
+  font-size: 18px;
+  color: #e95521
+}
+
+.btnRow {
+  display: flex;
+  gap: 10px
+}
+
+/* ====== BUTTONS ====== */
+.btnPrimary {
+  background: #ff6b00;
+  color: #fff;
+  border: none;
+  padding: 9px 24px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .25s
+}
+
+.btnPrimary:hover {
+  background: #e95521;
+  box-shadow: 0 3px 8px rgba(255, 107, 0, .25)
+}
+
+.btnGhost {
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 9px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: .25s
+}
+
+.btnGhost:hover {
+  background: #f9f9f9
+}
+
+/* ====== POPUP THÔNG TIN XE (hiển thị trong contentCard) ====== */
+.vehiclePopup {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 420px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .12);
+  z-index: 100;
+  padding: 0;
+  animation: fadeIn .2s ease-out
+}
+
+.vehiclePopup::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 22px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  z-index: 2
+}
+
+.vehiclePopup::after {
+  content: "";
+  position: absolute;
+  top: -11px;
+  right: 21px;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 11px solid #ddd;
+  z-index: 1
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+/* Tabs pill */
+.tabHeader,
+.popupTabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 12px 14px 10px;
+  border-radius: 12px 12px 0 0
+}
+
+.tabButton,
+.popupTab {
+  border: 1px solid #e7e7e7;
+  background: #fff;
+  color: #444;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all .2s ease
+}
+
+.tabButton:hover,
+.popupTab:hover {
+  border-color: #ffb48c;
+  background: #fff9f6;
+  color: #e95521
+}
+
+.activeTab,
+.popupTabActive {
+  background: #ff6b00;
+  border-color: #ff6b00;
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(233, 85, 33, .25)
+}
+
+.closeSmall {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  color: #8a8f98;
+  padding: 6px 8px
+}
+
+.closeSmall:hover {
+  color: #e95521
+}
+
+.tabContent,
+.popupContent {
+  padding: 16px 20px 20px;
+  font-size: 14px;
+  line-height: 1.6
+}
+
+.tabContent h4,
+.popupContent h4 {
+  font-size: 15px;
+  color: #333;
+  margin: 0 0 8px
+}
+
+/* Timeline */
+.timeline,
+.popupTimeline {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0 4px;
+  max-height: 440px;
+  overflow: auto
+}
+
+.stop,
+.timelineRow {
+  display: grid;
+  grid-template-columns: 64px 20px 1fr;
+  gap: 10px;
+  padding: 10px 16px;
+  align-items: start
+}
+
+.time,
+.timelineTime {
+  font-weight: 700;
+  color: #111;
+  line-height: 1.2
+}
+
+.dotLine,
+.timelineDotCol {
+  position: relative;
+  display: flex;
+  justify-content: center
+}
+
+.stop:not(:last-child) .dotLine::after,
+.timelineRow:not(:last-child) .timelineDotCol::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: -12px;
+  width: 2px;
+  background: #e8eaee
+}
+
+.dotLine::before,
+.timelineDot {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #cfd6dd;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px #cfd6dd;
+  margin-top: 2px
+}
+
+.isStart .dotLine::before,
+.isStart .timelineDot {
+  background: #0aa04b;
+  box-shadow: 0 0 0 3px #c6f4d6
+}
+
+.desc,
+.timelineMain {
+  min-width: 0
+}
+
+.desc b,
+.timelinePlace {
+  display: block;
+  color: #111;
+  margin-bottom: 2px
+}
+
+.desc p,
+.timelineAddr {
+  color: #525866;
+  line-height: 1.45;
+  word-break: break-word;
+  margin: 0
+}
+
+.note,
+.popupNote {
+  background: #f8fafb;
+  border: 1px solid #eef2f5;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 8px;
+  color: #445
+}
+
+/* ====== Responsive ====== */
+@media (max-width:980px) {
+  .grid {
+    grid-template-columns: 1fr
+  }
+
+  .rightCol {
+    order: -1
+  }
+
+  .pdGrid {
+    grid-template-columns: 1fr
+  }
+
+  .vehiclePopup {
+    width: 330px;
+    right: 0
+  }
+}

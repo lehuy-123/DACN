@@ -1,0 +1,180 @@
+/* app/admin/invoices/invoices.module.css */
+
+.container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    /* Đảm bảo container này chiếm hết không gian */
+    width: 100%; 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: #333;
+    font-size: 1.8rem;
+}
+
+/* Nút thêm mới (nếu có) */
+.addButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.addButton:hover {
+    background-color: #0056b3;
+}
+
+.toolbar {
+    margin-bottom: 20px;
+    display: flex; /* Dùng flexbox để sắp xếp các control */
+    justify-content: space-between; /* Đẩy search sang trái, filter sang phải */
+    align-items: center;
+    gap: 20px; /* Khoảng cách giữa các phần tử trong toolbar */
+}
+
+.searchWrapper {
+    position: relative;
+    width: 100%; /* Cho phép chiếm toàn bộ chiều rộng có thể */
+    max-width: 400px; /* Giới hạn chiều rộng tối đa */
+}
+
+.searchInput {
+    width: 100%;
+    padding: 10px 15px 10px 40px; /* Thêm padding trái cho icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+/* Bảng dữ liệu */
+.tableWrapper {
+    overflow-x: auto; /* Giúp bảng responsive trên màn hình nhỏ */
+    margin-bottom: 20px;
+}
+
+.table {
+    width: 100%; /* Bảng chiếm toàn bộ chiều rộng của .tableWrapper */
+    border-collapse: collapse;
+    min-width: 700px; /* Đảm bảo bảng không quá nhỏ trên màn hình vừa */
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e9ecef;
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap; /* Ngăn không cho nội dung trong cell bị ngắt dòng */
+}
+
+.table th {
+    background-color: #f8f9fa;
+    color: #555;
+    font-weight: 600;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+/* Các nút hành động */
+.actions {
+    display: flex;
+    gap: 5px; /* Giảm khoảng cách giữa các nút */
+}
+
+.actionButton {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.0rem; /* Kích thước icon nhỏ hơn một chút */
+    padding: 6px; /* Thay đổi padding */
+    border-radius: 50%;
+    width: 30px; /* Thay đổi kích thước nút */
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.viewButton {
+    color: #17a2b8; /* Xanh ngọc */
+}
+.viewButton:hover {
+    background-color: #17a2b820;
+}
+
+.printButton {
+    color: #007bff; /* Xanh dương */
+}
+.printButton:hover {
+    background-color: #007bff20;
+}
+
+/* Kiểu cho trạng thái */
+.status {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+    display: inline-block; /* Để padding và border-radius hoạt động tốt hơn */
+}
+
+.đãthanhtoán {
+    background-color: #28a745; /* Xanh lá */
+}
+.chưathanhtoán {
+    background-color: #ffc107; /* Vàng */
+    color: #333;
+}
+.đãhủy {
+    background-color: #6c757d; /* Xám */
+}
+
+
+/* Phân trang */
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+.pagination button {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.pagination button:hover {
+    background-color: #f1f3f5;
+}
+.pagination .active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
