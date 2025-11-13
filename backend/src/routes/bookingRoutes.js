@@ -12,7 +12,7 @@ import {
 
 const router = express.Router();
 
-// 🧾 Lịch sử đặt vé (lọc theo tên hoặc số điện thoại)
+// Lịch sử đặt vé (lọc theo tên hoặc số điện thoại)
 router.get("/history", getBookingHistory);
 
 // 🔎 Tìm kiếm booking theo tên người dùng
